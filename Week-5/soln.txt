@@ -1,0 +1,96 @@
+Original DataFrame:
+      Name  Age  Gender  Salary
+0     John   25    Male   50000
+1    Alice   30  Female   55000
+2      Bob   22    Male   40000
+3      Eve   35  Female   70000
+4  Charlie   28    Male   48000
+
+==================================================
+
+1. Accessing the default index:
+RangeIndex(start=0, stop=5, step=1)
+
+==================================================
+
+2. Setting 'Name' as index:
+        Age  Gender  Salary
+Name                       
+John     25    Male   50000
+Alice    30  Female   55000
+Bob      22    Male   40000
+Eve      35  Female   70000
+Charlie  28    Male   48000
+
+==================================================
+
+3. Resetting the index:
+      Name  Age  Gender  Salary
+0     John   25    Male   50000
+1    Alice   30  Female   55000
+2      Bob   22    Male   40000
+3      Eve   35  Female   70000
+4  Charlie   28    Male   48000
+
+==================================================
+
+4. Accessing row with loc (after setting 'Name' as index):
+Age          30
+Gender    Female
+Salary     55000
+Name: Alice, dtype: object
+
+==================================================
+
+5. Setting 'Age' as new index:
+      Name  Gender  Salary
+Age                       
+25    John    Male   50000
+30   Alice  Female   55000
+22     Bob    Male   40000
+35     Eve  Female   70000
+28  Charlie    Male   48000
+
+==================================================
+
+DataFrame Access Methods:
+
+==================================================
+
+1. Accessing 'Age' column:
+0    25
+1    30
+2    22
+3    35
+4    28
+Name: Age, dtype: int64
+
+==================================================
+
+2. Accessing row at index 1:
+Name      Alice
+Age          30
+Gender    Female
+Salary     55000
+Name: 1, dtype: object
+
+==================================================
+
+3. Accessing first three rows and 'Name', 'Age' columns:
+    Name  Age
+0   John   25
+1  Alice   30
+2    Bob   22
+
+==================================================
+
+4. Rows where Age > 25:
+      Name  Age  Gender  Salary
+1    Alice   30  Female   55000
+3      Eve   35  Female   70000
+4  Charlie   28    Male   48000
+
+==================================================
+
+5. Salary at index 2:
+40000
